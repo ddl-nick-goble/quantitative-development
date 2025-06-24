@@ -35,7 +35,7 @@ def overlay_legend(orient='none'):
         title='Rate Type'
     )
 
-def main():
+def app():
     st.markdown(
         """
         <style>
@@ -153,5 +153,3 @@ def main():
         )
     
         st.altair_chart(bar_chart, use_container_width=True)
-
-main()

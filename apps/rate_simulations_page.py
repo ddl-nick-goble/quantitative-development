@@ -67,7 +67,7 @@ def load_all_cone_curves(as_of_date: date, days_forward: int) -> pd.DataFrame:
     return ds.query(sql).to_pandas()
 
 # ─── App ───────────────────────────────────────────────────────────────────
-def main():
+def app():
     dates = get_available_dates()
     if not dates:
         st.error("No cone dates found in rate_cones.")
@@ -438,10 +438,6 @@ def main():
 
         chart = (
             alt.layer(area, line)
-               .properties(height=400, title=f"{metric_option} Over Time")
+               .properties(height=400, title=f"{smetric_option} Over Time")
         )
         st.altair_chart(chart, use_container_width=True)
-
-
-if __name__ == "__main__":
-    main()

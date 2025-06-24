@@ -173,5 +173,5 @@ def main():
         horizontal=True
     )
 
-if __name__ == "__main__":
+def app():
     main()

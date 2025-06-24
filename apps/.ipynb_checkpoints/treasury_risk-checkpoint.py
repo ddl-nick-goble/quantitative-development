@@ -297,5 +297,5 @@ def main():
         )
         st.dataframe(pivoted)
 
-if __name__ == "__main__":
+def app():
     main()
